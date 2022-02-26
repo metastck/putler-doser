@@ -1,6 +1,6 @@
 # putler-doser
 
-A script to target the 50 biggest russian propoganda websites:
+A program to target the 50 biggest russian propoganda websites:
 - https://lenta.ru/
 - https://ria.ru/
 - https://ria.ru/lenta/
