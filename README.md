@@ -53,4 +53,8 @@ A program to target the 50 biggest russian propoganda websites:
 - https://ugmk.ua/
 - https://omk.ru/
 
-Only works on Windows
+## Disclaimer
+- Use this program at your own risk and responsibility.
+
+## Compatibility
+- The program is made for Windows only
