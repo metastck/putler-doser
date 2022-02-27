@@ -1,6 +1,25 @@
 # putler-doser
 
-A program to target the 50 biggest russian propoganda websites:
+A program to target the 50 biggest **russian propoganda** websites.
+![](https://user-images.githubusercontent.com/96660055/155876774-df03c397-c308-4bf3-8752-5ec92272884b.png)
+
+## Instructions
+- Download the **.exe** file from the [releases page](https://github.com/metastck/putler-doser/releases).
+- Locate the exe and run it. A **Windows smartscreen** warning might pop up. Don't panic this is a false positive. You can scan the program with your antivirus if you want it shouldn't detect anything.
+- If the program doesn't start try opening a **terminal** in the directory you have the file downloaded and run it by typing `doser.exe` in the **terminal** and pressing **enter**. You can find a guide on how to open a **terminal** in a specific directory [here](https://www.lifewire.com/open-command-prompt-in-a-folder-5185505).
+## Compile for yourself
+This program is made in **golang**. You can download it from [here](https://go.dev/dl/)
+
+After you have it installed download the [source code](https://codeload.github.com/metastck/putler-doser/zip/refs/heads/master), extract it and run this command in the terminal:
+```
+go build
+```
+This will output a **doser.exe** file which you can then execute.
+
+## Compatibility
+The program only works on **Windows** for now.
+
+# Websites list:
 - https://lenta.ru/
 - https://ria.ru/
 - https://ria.ru/lenta/
@@ -54,7 +73,4 @@ A program to target the 50 biggest russian propoganda websites:
 - https://omk.ru/
 
 ## Disclaimer
-- Use this program at your own risk and responsibility.
-
-## Compatibility
-- The program is made for Windows only
+Use this program at your own **risk** and **responsibility**.
