@@ -14,7 +14,7 @@ var client = fasthttp.Client{MaxConnsPerHost: 999999}
 var count uint64
 var errors uint64
 
-var urls = [51]string{
+var urls = []string{
 	"https://lenta.ru/",
 	"https://ria.ru/",
 	"https://ria.ru/lenta/",
@@ -65,7 +65,23 @@ var urls = [51]string{
 	"https://www.uralkali.com/ru/",
 	"https://www.eurosib.ru/",
 	"https://ugmk.ua/",
-	"https://omk.ru/"}
+	"https://omk.ru/",
+	"https://www.roscosmos.ru/",
+	"https://tass.com/",
+	"https://russia-insider.com/",
+	"https://www.pravda.ru/",
+	"http://rosneft.ru",
+	"https://www.rostec.ru/",
+	"https://rosim.gov.ru/",
+	"https://x5.ru/",
+	"https://www.rosseti.ru/",
+	"https://www.interrao.ru/",
+	"https://www.transneft.ru/",
+	"https://rosatom.ru/",
+	"https://rusal.ru/",
+	"https://www.nornickel.ru/",
+	"http://www.uacrussia.ru/",
+}
 
 func main() {
 	cpus := runtime.NumCPU()
