@@ -83,20 +83,23 @@ func main() {
 		}
 	}
 
-	fmt.Println(color.Cyan.Render("Slava ") + color.Yellow.Render("Ukraini!"))
+	fmt.Println("Launching attacker...")
 
-	var lastTime int32
+	startTime := time.Now()
 
 	for {
-		lastTime = count
+		time.Sleep(500 * time.Millisecond)
 
-		time.Sleep(1 * time.Second)
+		timeElapsed := float32(time.Since(startTime).Round(1*time.Second)) / 1000000000
+
 		fmt.Print("\033[H\033[2J")
 		fmt.Println(color.Cyan.Render("Slava ") + color.Yellow.Render("Ukraini!") + "\n")
-		fmt.Println("Requests per second: " + color.Yellow.Render(strconv.Itoa(int(count-lastTime))))
-		fmt.Println("Requests sent: " + color.Yellow.Render(strconv.Itoa(int(count))))
+		fmt.Println("Requests/s: " + color.Yellow.Render(strconv.Itoa(int(float32(count)/timeElapsed))))
+		fmt.Println("Total requests: " + color.Yellow.Render(strconv.Itoa(int(count))))
 		fmt.Println("Successfull requests: " + color.Green.Render(strconv.Itoa(int(count-errors))))
+		fmt.Println("Successfull requests/s: " + color.Green.Render(strconv.Itoa(int(float32(count-errors)/timeElapsed))))
 		fmt.Println("Errors: " + color.Red.Render(strconv.Itoa(int(errors))))
+		fmt.Println("Time elapsed: " + color.Cyan.Render(time.Since(startTime).Round(1*time.Second)))
 	}
 }
 
@@ -106,8 +109,10 @@ func sendRequest(host string) {
 	res := fasthttp.AcquireResponse()
 
 	err := client.Do(req, res)
+
 	if err != nil {
 		atomic.AddInt32(&errors, 1)
 	}
+
 	fasthttp.ReleaseRequest(req)
 }
