@@ -71,6 +71,21 @@ The program only works on **Windows** for now.
 - https://www.eurosib.ru/
 - https://ugmk.ua/
 - https://omk.ru/
+- https://www.roscosmos.ru/
+- https://tass.com/
+- https://russia-insider.com/
+- https://www.pravda.ru/
+- http://rosneft.ru
+- https://www.rostec.ru/
+- https://rosim.gov.ru/
+- https://x5.ru/
+- https://www.rosseti.ru/
+- https://www.interrao.ru/
+- https://www.transneft.ru/
+- https://rosatom.ru/
+- https://rusal.ru/
+- https://www.nornickel.ru/
+- http://www.uacrussia.ru/
 
 ## Disclaimer
-Use this program at your own **risk** and **responsibility**.
+You take full **responsibility** of how you use this program and the **consequences** that can come. Use it at your own **risk**.
