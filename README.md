@@ -88,19 +88,10 @@ The program only works on **Windows** for now.
 - http://www.uacrussia.ru/
 - https://cleanbtc.ru/
 - https://bonkypay.com/
-- https://changer.club/
-- https://superchange.net
 - https://mine.exchange/
-- https://platov.co
-- https://ww-pay.net/
-- https://delets.cash/
-- https://betatransfer.org
-- https://ramon.money/
 - https://coinpaymaster.com/
-- https://bitokk.biz/
 - https://www.netex24.net
 - https://cashbank.pro/
-- https://flashobmen.com/
 - https://abcobmen.com/
 - https://ychanger.net/
 - https://multichange.net/
@@ -108,8 +99,6 @@ The program only works on **Windows** for now.
 - https://royal.cash/
 - https://prostocash.com/
 - https://baksman.org/
-- https://kupibit.me/
-- https://abcobmen.com
 
 ## Disclaimer
 You take full **responsibility** of how you use this program and the **consequences** that can come. Use it at your own **risk**.
