@@ -7,6 +7,10 @@
 - Download the **.exe** file from the [releases page](https://github.com/metastck/putler-doser/releases).
 - Locate the exe and run it. A **Windows smartscreen** warning might pop up. Don't panic this is a false positive. You can scan the program with your antivirus if you want it shouldn't detect anything.
 - If the program doesn't start try opening a **terminal** in the directory you have the file downloaded and run it by typing `doser.exe` in the **terminal** and pressing **enter**. You can find a guide on how to open a **terminal** in a specific directory [here](https://www.lifewire.com/open-command-prompt-in-a-folder-5185505).
+
+## Contribute
+If you know any other **websites** this program could target please submit them by opening a new **github issue** with the **tag** `urls submission`. It would great if you could also provide any **proof** to why these **websites** are worth targeting.
+
 ## Compile for yourself
 This program is made in **golang**. You can download it from [here](https://go.dev/dl/)
 
