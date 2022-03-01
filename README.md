@@ -1,6 +1,6 @@
 # putler-doser
 
-- Help **Ukraine** by contributing your bandwith and computing power. This is a program that targets the major **russian goverment** or **goverment related company** and **propoganda** websites.
+- Help **Ukraine** by contributing your bandwith and computing power. This is a program that targets the major **Russian government** or **government related company** and **propaganda** websites.
 ![](https://user-images.githubusercontent.com/96660055/155876774-df03c397-c308-4bf3-8752-5ec92272884b.png)
 
 ## Instructions
