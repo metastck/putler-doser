@@ -5,14 +5,14 @@
 
 ## Instructions
 - Download the **.exe** file from the [releases page](https://github.com/metastck/putler-doser/releases).
-- Locate the exe and run it. A **Windows smartscreen** warning might pop up. Don't panic this is a false positive. You can scan the program with your antivirus if you want it shouldn't detect anything.
-- If the program doesn't start try opening a **terminal** in the directory you have the file downloaded and run it by typing `doser.exe` in the **terminal** and pressing **enter**. You can find a guide on how to open a **terminal** in a specific directory [here](https://www.lifewire.com/open-command-prompt-in-a-folder-5185505).
+- Locate the exe and run it. A **Windows SmartScreen** warning might pop up. Don't panic this is a false positive. You can scan the program with your antivirus if you want, it shouldn't detect anything.
+- If the program doesn't start try opening a **terminal** in the directory you have the file downloaded and run it by typing `doser.exe` and pressing **enter** in the **terminal**. You can find a guide on how to open a **terminal** in a specific directory [here](https://www.lifewire.com/open-command-prompt-in-a-folder-5185505).
 
 ## Contribute
-If you know any other **websites** this program could target please submit them by opening a new **github issue** with the **tag** `urls submission`. It would great if you could also provide any **proof** to why these **websites** are worth targeting.
+If you know any other **websites** this program could target please submit them by opening a new **GitHub issue** with the **tag** `urls submission`. It would great if you could also provide any **proof** to why these **websites** are worth targeting.
 
 ## Compile for yourself
-This program is made in **golang**. You can download it from [here](https://go.dev/dl/)
+This program is made in **golang**. You can download it from [here](https://go.dev/dl/).
 
 After you have it installed download the [source code](https://codeload.github.com/metastck/putler-doser/zip/refs/heads/master), extract it and run this command in the terminal:
 ```
@@ -79,7 +79,7 @@ The program only works on **Windows** for now.
 - https://tass.com/
 - https://russia-insider.com/
 - https://www.pravda.ru/
-- http://rosneft.ru
+- http://rosneft.ru/
 - https://www.rostec.ru/
 - https://rosim.gov.ru/
 - https://x5.ru/
@@ -94,12 +94,12 @@ The program only works on **Windows** for now.
 - https://bonkypay.com/
 - https://mine.exchange/
 - https://coinpaymaster.com/
-- https://www.netex24.net
+- https://www.netex24.net/
 - https://cashbank.pro/
 - https://abcobmen.com/
 - https://ychanger.net/
 - https://multichange.net/
-- https://24paybank.ne
+- https://24paybank.ne/
 - https://royal.cash/
 - https://prostocash.com/
 - https://baksman.org/
