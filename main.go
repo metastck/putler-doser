@@ -66,7 +66,7 @@ func main() {
 			urls = getList()
 		}
 
-		nextRefresh := time.Now().Unix() + 20
+		nextRefresh := time.Now().Unix() + 3600
 
 		for i := 0; i < int(float32(cpus)*multiplier); i++ {
 			for _, url := range urls {
