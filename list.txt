@@ -90,3 +90,4 @@ https://cloud.rkn.gov.ru/
 https://mail.rkn.gov.ru/
 https://yandex.ru/
 https://yandex.by/
+https://iz.ru/
