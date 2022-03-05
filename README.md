@@ -32,7 +32,6 @@ The program works on both **Windows** and **Linux**. No support for **Mac** is p
 # Websites list:
 - https://lenta.ru/
 - https://ria.ru/
-- https://ria.ru/lenta/
 - https://www.rbc.ru/
 - https://www.rt.com/
 - http://kremlin.ru/
@@ -79,13 +78,12 @@ The program works on both **Windows** and **Linux**. No support for **Mac** is p
 - https://www.polymetalinternational.com/ru/
 - https://www.uralkali.com/ru/
 - https://www.eurosib.ru/
-- https://ugmk.ua/
 - https://omk.ru/
 - https://www.roscosmos.ru/
 - https://tass.com/
 - https://russia-insider.com/
 - https://www.pravda.ru/
-- http://rosneft.ru/
+- http://rosneft.ru
 - https://www.rostec.ru/
 - https://rosim.gov.ru/
 - https://x5.ru/
@@ -100,15 +98,30 @@ The program works on both **Windows** and **Linux**. No support for **Mac** is p
 - https://bonkypay.com/
 - https://mine.exchange/
 - https://coinpaymaster.com/
-- https://www.netex24.net/
+- https://www.netex24.net
 - https://cashbank.pro/
-- https://abcobmen.com/
 - https://ychanger.net/
 - https://multichange.net/
-- https://24paybank.ne/
+- https://24paybank.ne
 - https://royal.cash/
 - https://prostocash.com/
 - https://baksman.org/
+- https://sputnik.by/
+- https://www.vedomosti.ru/
+- https://api.sberbank.ru/
+- https://www.mk.ru/
+- https://riafan.ru/
+- https://www.kommersant.ru/
+- https://www.crimea.kp.ru/
+- https://www.gazeta.ru/
+- https://proverki.gov.ru/
+- https://stroi.gov.ru/
+- https://pwd.wto.economy.gov.ru/
+- https://mvd.gov.ru
+- https://cloud.rkn.gov.ru/
+- https://mail.rkn.gov.ru/
+- https://yandex.ru/
+- https://yandex.by/
 
 ## Disclaimer
 You take full **responsibility** of how you use this program and the **consequences** that can come. Use it at your own **risk**.
