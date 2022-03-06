@@ -12,7 +12,7 @@
 ### Linux
 - Download the **doser-linux** file from the [releases page](https://github.com/metastck/putler-doser/releases).
 - Locate the file and run it in the **terminal** with the command `./doser-linux`.
-- Please note that the **linux** version is still **experimental** and might have some **issues**.
+- Please note that the **Linux** version is still **experimental** and might have some **issues**.
 
 ## Contribute
 If you know any other **websites** this program could target please submit them by opening a new **GitHub issue** with the **tag** `urls submission`. It would great if you could also provide any **proof** to why these **websites** are worth targeting.
@@ -83,7 +83,7 @@ The program works on both **Windows** and **Linux**. No support for **Mac** is p
 - https://tass.com/
 - https://russia-insider.com/
 - https://www.pravda.ru/
-- http://rosneft.ru
+- http://rosneft.ru/
 - https://www.rostec.ru/
 - https://rosim.gov.ru/
 - https://x5.ru/
@@ -98,11 +98,11 @@ The program works on both **Windows** and **Linux**. No support for **Mac** is p
 - https://bonkypay.com/
 - https://mine.exchange/
 - https://coinpaymaster.com/
-- https://www.netex24.net
+- https://www.netex24.net/
 - https://cashbank.pro/
 - https://ychanger.net/
 - https://multichange.net/
-- https://24paybank.ne
+- https://24paybank.ne/
 - https://royal.cash/
 - https://prostocash.com/
 - https://baksman.org/
@@ -117,7 +117,7 @@ The program works on both **Windows** and **Linux**. No support for **Mac** is p
 - https://proverki.gov.ru/
 - https://stroi.gov.ru/
 - https://pwd.wto.economy.gov.ru/
-- https://mvd.gov.ru
+- https://mvd.gov.ru/
 - https://cloud.rkn.gov.ru/
 - https://mail.rkn.gov.ru/
 - https://yandex.ru/
