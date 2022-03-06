@@ -90,14 +90,14 @@ func main() {
 
 			fmt.Print("\033[H\033[2J")
 			fmt.Println(color.Cyan.Render("Slava ") + color.Yellow.Render("Ukraini!") + "\n")
-			fmt.Println("Urls: " + color.Magenta.Render(len(urls)))
+			fmt.Println("URLs: " + color.Magenta.Render(len(urls)))
 			fmt.Print("Requests/s: ")
 			color.Yellow.Printf("%d\n", uint64(float64(count)/timeElapsed))
 			fmt.Print("Total requests: ")
 			color.Yellow.Printf("%d\n", count)
-			fmt.Print("Successfull requests: ")
+			fmt.Print("Successful requests: ")
 			color.Green.Printf("%d\n", count-errors)
-			fmt.Print("Successfull requests/s: ")
+			fmt.Print("Successful requests/s: ")
 			color.Green.Printf("%d\n", uint64(float64(count-errors)/timeElapsed))
 			fmt.Print("Errors: ")
 			color.Red.Printf("%d\n", errors)
@@ -106,7 +106,7 @@ func main() {
 
 			if time.Now().Unix() > nextRefresh {
 				fmt.Print("\033[H\033[2J")
-				fmt.Println("Fetching urls...")
+				fmt.Println("Fetching URLs...")
 				break
 			}
 		}
